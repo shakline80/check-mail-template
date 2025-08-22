@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PillowAudio - The Future of Erotic Storytelling</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Pen+Script&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Reset styles for email clients */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+        p{
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            outline: none;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+            line-height: 1.5;
+            color: #fff;
+        }
+        
+        .email-container {
+            max-width: 660px;
+            margin: 0 auto;
+            background-color: #170E13;
+            padding: 40px;
+        }
+        .logo{
+            text-align: center;
+            margin-bottom: 25px;
+            
+        }
+        .logo img{
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .banner img{
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .content-wrapper{
+            margin-top: -8px;
+            padding: 35px;
+            background-color: #24161C;
+            border: 1px solid #3A2D33;
+            border-top: 0;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        .top-wrap h2 {
+            font-size: 30px;
+            letter-spacing: .3px;
+            font-weight: 700;
+        }
+        .top-wrap h4 {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        .boxes h4{
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .top-wrap p{
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .top-wrap {
+            margin-bottom: 15px;
+        }
+        .box{
+            border: 1px solid #74353B;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 5px;
+            display: inline-block;
+            width: 100%;
+        }
+        .icon-box{
+            width: 5%;
+            float: left;
+            min-height: 45px;
+            padding-top: 3px;
+        }
+        .icon-box img{
+            width: 24px;
+        }
+        .text-box{
+            width: 95%;
+            float: right;
+            height: 100%;
+            padding-left: 8px;
+        }
+        .text-box h4{
+            margin-bottom:5px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .text-box p{
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        .text-red{
+            color: #EC676D;
+            font-weight: 600;
+        }
+         .bottom-wrap{
+            margin-top: 15px;
+            margin-bottom: 15px;
+         }
+        .bottom-wrap p {
+            font-size: 15px;
+        }
+        .theme-btn a{
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 500;
+            border-radius: 100px;
+            color: #fff;
+            font-size: 16px;
+            display: inline-block;
+            width: 100%;
+            background: url(https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/frame_427322285.png);
+            background-position: center;
+            background-size: cover;
+            text-decoration: none;
+            border: 1px solid #F18E92;
+        }
+        .team-text{
+            margin-top: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #201419;
+        }
+        .team-text p{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .team-text h2{
+            color: #EC676D;
+            font-family: "Nanum Pen Script", cursive;
+            font-size: 36px;
+            line-height: 1;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        .footer{
+            margin-top: 15px;
+        }
+        .footer-top{
+            padding: 15px 0;
+            border-bottom: 1px solid #22161B;
+            display: inline-block;
+            width: 100%;
+        }
+        .footer-logo {
+            width: 20%;
+            float: left;
+            padding-top: 7px;
+        }
+        .footer-logo img{
+            max-width: 136px;
+        }
+        .social-link{
+            width: 80%;
+            text-align: right;
+            float: right;
+        }
+        .social-link a{
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: #24161C;
+            padding: 6px 12px;
+            border-radius: 50px;
+            text-decoration: none;
+
+        }
+        .social-link a img{
+            max-width: 18px;
+            max-height: 18px;
+            margin-right: 8px;
+        }
+        .footer-bottom {
+            padding: 16px 0;
+            display: inline-block;
+            width: 100%;
+        }
+        .footer-bottom p {
+            color: #8F898C;
+            font-size: 12px;
+            font-weight: 500;
+            margin: 0;
+            display: inline-block;
+            float: left;
+        }
+         .privacy{
+            display: inline-flex;
+            align-items: center;
+            gap: 0 6px;
+            float: right;
+         }
+        .privacy a{
+            display: inline-block;
+            color: #8F898C;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .privacy span{
+            display: inline-block;
+            width: 15px;
+            height: 1px;
+            background-color: #24181D;
+        }
+        .copyright p{
+            margin: 0;
+            font-size: 12px;
+            color: #8F898C;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .copyright p a{
+            text-decoration: underline;
+            font-weight: 600;
+            color:#8F898C ;
+        }
+
+          /* Mobile Styles */
+            @media only screen and (max-width: 600px) {
+               .email-container {
+                    max-width: 660px;
+                    margin: 0 auto;
+                    padding: 25px 10px;
+                }
+                .content-wrapper {
+                    margin-top: -8px;
+                    padding: 25px 15px;
+                }
+                .logo img {
+                    max-width: 250px;
+                    margin: 0 auto;
+                }
+            }
+            @media only screen and (max-width: 480px) {
+                .email-container {
+                        margin: 0 auto;
+                        padding: 20px 10px;
+                    }
+                    .content-wrapper {
+                        margin-top: -8px;
+                        padding: 20px 12px;
+                    }
+                    .logo img {
+                        max-width: 200px;
+                        margin: 0 auto;
+                    }
+                    .top-wrap h2 {
+                        font-size: 24px;
+                        letter-spacing: 0;
+                        line-height: 28px;
+                    }
+                    .top-wrap h4 {
+                        font-size: 14px;
+                    }
+                    .top-wrap p {
+                        font-size: 13px;
+                    }
+                    .boxes h4 {
+                        font-size: 14px
+                    }
+                    .text-box p {
+                        font-size: 13px;
+                    }
+                    .text-box h4 {
+                        font-size: 14px;
+                    }
+                    .bottom-wrap p {
+                        font-size: 13px;
+                    }
+                    .text-box {
+                        width: 92%;
+                    }
+                    .icon-box {
+                        width: 8%;
+                    }
+                    .theme-btn a {
+                        padding: 11px 20px;
+                        font-size: 14px;
+                    }
+                    .team-text h2 {
+                        font-size: 28px;
+                    }
+                    .team-text p {
+                        font-size: 13px;
+                    }
+                    .social-link a img {
+                        max-width: 16px;
+                        max-height: 16px;
+                        margin-right: 5px;
+                    }
+                    .social-link a {
+                        margin-right: 3px;
+                        font-size: 10.5px;
+                        padding: 6px 9px;
+                    }
+                    .footer-logo {
+                        padding-top: 5px;
+                    }
+                    .logo {
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+                }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+       <div class="logo">
+            <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/frame_427322136.png" alt="">
+       </div>
+       <div class="banner">
+            <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/frame_1261155750_3.png" alt="">
+       </div>
+       <div class="content-wrapper">
+            <div class="top-wrap">
+                <h2>Your fantasies deserve a voice 💋</h2>
+                <h4>Welcome to PillowAudio – the future of erotic storytelling.</h4>
+                <p>Close your eyes for a moment… imagine a voice whispering your deepest desires, painting scenes so vivid you can almost feel them. That’s what PillowAudio was created for – to take you past the page, into the world of raw, sensual imagination</p>
+            </div>
+            <div class="boxes">
+                <h4>Here’s where your journey begins:</h4>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/fire3.png" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h4>Your Invitation to Fantasy</h4>
+                        <p>You’ve just joined a community that dares to listen differently.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/cherry.png" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h4>A First Taste</h4>
+                        <p>Enjoy 2 intoxicating stories on us, crafted to awaken every hidden corner of your desire.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/mouth.png" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h4>Exclusive Welcome Gift</h4>
+                        <p>Take <span class="text-red">15% OFF</span> your first premium subscription and unlock a library of seduction without limits.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/moonstar.png" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h4>Endless Nights of Pleasure</h4>
+                        <p>Explore genres from soft whispers to dark temptations, voiced by narrators who know how to tease, entice, and please.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-wrap">
+                <p>Every story is a slow burn. Every voice a caress. Every chapter a release.</p>
+                <p>Your fantasy is waiting to be heard. Are you ready to listen?</p>
+            </div>
+            <div class="theme-btn">
+                <a href="#">Step Into PillowAudio Tonight ></a>
+            </div>
+            <div class="team-text">
+                <p>With passion 💋 </p>
+                <h2>Team PillowAudio</h2>
+            </div>
+       </div>
+       <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/pillowaudio.png" alt="">
+                </div>
+                <div class="social-link">
+                    <a href="#"><img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/telegram_fill.png" alt=""> <span>Telegram</span></a>
+                    <a href="#"><img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/discord_fill.png" alt=""> <span>Discord</span></a>
+                    <a href="#"><img src="https://fcpbadz.stripocdn.email/content/guids/CABINET_096930f5551e121aeeff198a482f9a73d8adc6e07779e330e0529494285e113f/images/globus.png" alt=""> <span>Website</span></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 PillowAudio</p>
+                <div class="privacy">
+                    <a href="#">Terms of Service</a>
+                    <span></span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Don’t want to receive such emails? <a href="#">Unsubscribe</a></p>
+            </div>
+       </footer>
+    </div>
+</body>
+</html>
