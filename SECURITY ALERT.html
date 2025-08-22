@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defendia</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Reset styles for email clients */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+        p{
+            margin-bottom: 10px;
+            color: #191847;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            outline: none;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+            line-height: 1.5;
+            color: #191847;
+            background-color: #F9FBFC;
+        }
+        
+        .main-container {
+            max-width: 660px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+        }
+        .content-container{
+            width: 100%;
+            padding: 35px;
+        }
+        header {
+            background: #1E1E1E;
+        }
+        header .container {
+            max-width: 660px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+        header a {
+            display: inline-block;
+        }
+        header img {
+            width: 174px;
+        }
+        .highlight{
+            color: #498EFF;
+            font-weight: 600;
+        }
+        .top-content h2{
+            color: #191847;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .top-content p{
+            color: #191847;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        .icon-box img {
+            max-width: 24px;
+        }
+        .box {
+            background: #FAFAFA;
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid #E3E3E3;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .text-box{
+            width: 94%;
+            float: right;
+            padding-left: 10px;
+        }
+      .icon-box {
+            width: 6%;
+            float: left;
+            min-height: 52px;
+            text-align: center;
+            padding-top: 15px;
+        }
+        .text-box h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: #191847;
+            font-weight: 700;
+        }
+        .text-box p {
+            color: #191847;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .box-items h5 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .theme-btn {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .theme-btn a {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            background-image: url(https://i.ibb.co.com/nML7mhwy/Frame-15.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .bottom-text {
+            padding-top: 5px;
+        }
+        .bottom-text p {
+            font-size: 14px;
+            color: #191847;
+            margin-bottom: 15px;
+        }
+        .bottom-text h5 {
+            color: #191847;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .bottom-text h3 {
+            font-size: 36px;
+            color: #3972FF;
+            margin: 0;
+            font-family: "Caveat", cursive;
+            letter-spacing: .4px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .content-bottom {
+            padding: 35px;
+            background-color: #F9FBFC;
+        }
+        .footer-logo {
+            width: 120px;
+            float: left;
+        }
+        .socail-links {
+            float: left;
+            width: calc(100% - 120px);
+            text-align: right;
+        }
+        .socail-links a img {
+            width: 14px;
+        }
+        .socail-links a {
+            display: inline-flex;
+            width: 28px;
+            height: 28px;
+            background: #EEF0F1;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 3px;
+        }
+        .footer-top{
+            margin-bottom: 15px;
+            display: inline-block;
+            width: 100%;
+        }
+        .footer-bottom p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #67738A;
+        }
+        .footer-bottom p a {
+            color: #3972FF;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        span.redt-text {
+            color: #FF1500;
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .box-txt {
+            padding: 10px 0;
+            font-size: 15px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .content-container {
+                width: 100%;
+                padding: 25px 15px;
+            }
+            header {
+                background: #1E1E1E;
+            }
+            header img {
+                width: 160px;
+            }
+            .content-bottom {
+                padding: 30px 15px;
+            }
+            .footer-logo {
+                width: 110px;
+            }
+            .socail-links a {
+                margin-left: 2px;
+            }
+            header .container {
+                margin: 0 auto;
+                padding: 20px 15px;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            header img {
+                width: 140px;
+            }
+            .top-content h2 {
+                font-size: 20px;
+            }
+            .top-content p {
+                font-size: 13px;
+            }
+            .box-items h5 {
+                font-size: 13px;
+            }
+            .text-box p {
+                font-size: 13px;
+            }
+            .box {
+                padding: 12px;
+            }
+            .bottom-text h5 {
+                font-size: 13px;
+            }
+            .theme-btn a {
+                font-size: 14px;
+            }
+            .socail-links a {
+                margin-left: 3px;
+                margin-bottom: 3px;
+            }
+            header .container {
+                padding: 15px 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#">
+                <img src="https://i.ibb.co.com/BHMmqPtT/Frame-2.png" alt="Frame-2" border="0">
+            </a>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="content-container">
+            <div class="top-content">
+                <h2>Hi $Full-Name,</h2>
+                <p>Defendia’s breach scanner has found that your email address, 
+                <span class="redt-text">$BREACHED-EMAIL,</span> has appeared in a newly discovered data breach on the service: <span class="redt-text">$AFFECTED-SERVICE</span></p>
+                <p>Your Defendia vault and all the data inside it remain 100% secure.</p>
+                <p>However, your account on the external service is now at high risk. We urge you to take the following steps immediately:</p>
+            </div>
+            <div class="box-items">
+                <h5>To activate your protection, please follow these two simple steps:</h5>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://i.ibb.co.com/DgLMd5wX/passkeys.png" alt="passkeys" border="0">
+                    </div>
+                    <div class="text-box">
+                        <h4>Change Your Password</h4>
+                        <p>Log in to <span class="redt-text">$AFFECTED-SERVICE</span> and create a new, strong password.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://i.ibb.co.com/vfPmYTZ/shield-keyhole-1.png" alt="shield-keyhole-1" border="0">
+                    </div>
+                    <div class="text-box">
+                        <h4>Update Your Vault</h4>
+                        <p>If you have this password saved, update it in your Defendia vault.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://i.ibb.co.com/3y6jwYkM/arrow.png" alt="arrow" border="0">
+                    </div>
+                    <div class="text-box">
+                        <h4>Secure Similar Accounts</h4>
+                        <p>If you've reused this password anywhere else, change it there too.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-txt">
+                <p>This is the very reason Defendia exists – to catch threats before they become disasters. You’re in control.</p>
+            </div>
+            <div class="theme-btn">
+                <a href="#">View Breach Details</a>
+            </div>
+            <div class="bottom-text">
+                <h5>Stay vigilant,</h5>
+                <h3>The Defendia Security Team</h3>
+            </div>
+        </div>
+        <div class="content-bottom">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="3">
+                        <img src="https://i.ibb.co.com/7xQ6WbN8/Frame-2-1.png" alt="footer-logo" border="0">
+                    </a>
+                </div>
+                <div class="socail-links">
+                    <a href="#"><img src="https://i.ibb.co.com/Xr1qmyNH/Social-Icons.png" alt="Social-Icons" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/5qnPvXc/Social-Icons-1.png" alt="Social-Icons-1" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/0jNhbW8H/Social-Icons-2.png" alt="Social-Icons-2" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/PZjkWp47/Social-Icons-3.png" alt="Social-Icons-3" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/zhsdJzyV/Social-Icons-4.png" alt="Social-Icons-4" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/1tMm2ySK/Social-Icons-5.png" alt="Social-Icons-5" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/yB0yTmGj/Social-Icons-6.png" alt="Social-Icons-6" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/vCDPtvhY/Social-Icons-7.png" alt="Social-Icons-7" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/yB7bXKJT/Social-Icons-8.png" alt="Social-Icons-8" border="0"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2261 Market Street #4667, San Francisco, CA 94114</p>
+                <p>Need help? Contact us at <a href="#">support@defendia.app</a></p>
+                <p>&copy; 2025 Defendia AB</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defendia</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Reset styles for email clients */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 12px;
+        }
+        p{
+            margin-bottom: 10px;
+            color: #191847;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            outline: none;
+            text-decoration: none;
+            width: 100%;
+        }
+        
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Inter", sans-serif;
+            line-height: 1.5;
+            color: #191847;
+            background-color: #F9FBFC;
+        }
+        
+        .main-container {
+            max-width: 660px;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+        }
+        .content-container{
+            width: 100%;
+            padding: 35px;
+        }
+        header {
+            background: #1E1E1E;
+        }
+        header a {
+            display: inline-block;
+        }
+         header .container {
+            max-width: 660px;
+            margin: 0 auto;
+            padding: 20px 40px;
+        }
+        header img {
+            width: 174px;
+        }
+        .highlight{
+            color: #498EFF;
+            font-weight: 600;
+        }
+        .top-content h2{
+            color: #191847;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .top-content p{
+            color: #191847;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        .icon-box img {
+            max-width: 24px;
+        }
+        .box {
+            background: #FAFAFA;
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid #E3E3E3;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .text-box{
+            width: 94%;
+            float: right;
+            padding-left: 10px;
+        }
+        .icon-box {
+            width: 6%;
+            float: left;
+            min-height: 70px;
+            text-align: center;
+            padding-top: 25px;
+        }
+        .text-box h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: #191847;
+            font-weight: 700;
+        }
+        .text-box p {
+            color: #191847;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .box-items h5 {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .theme-btn {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .theme-btn a {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            background-image: url(https://i.ibb.co.com/nML7mhwy/Frame-15.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .bottom-text {
+            padding-top: 5px;
+        }
+        .bottom-text p {
+            font-size: 14px;
+            color: #191847;
+            margin-bottom: 15px;
+        }
+        .bottom-text h5 {
+            color: #191847;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .bottom-text h3 {
+            font-size: 36px;
+            color: #3972FF;
+            margin: 0;
+            font-family: "Caveat", cursive;
+            letter-spacing: .4px;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .content-bottom {
+            padding: 35px;
+            background-color: #F9FBFC;
+        }
+        .footer-logo {
+            width: 120px;
+            float: left;
+        }
+        .socail-links {
+            float: left;
+            width: calc(100% - 120px);
+            text-align: right;
+        }
+        .socail-links a img {
+            width: 14px;
+        }
+        .socail-links a {
+            display: inline-flex;
+            width: 28px;
+            height: 28px;
+            background: #EEF0F1;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 3px;
+        }
+        .footer-top{
+            margin-bottom: 15px;
+            display: inline-block;
+            width: 100%;
+        }
+        .footer-bottom p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #67738A;
+        }
+        .footer-bottom p a {
+            color: #3972FF;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .box-items-two .icon-box {
+            min-height: auto;
+            padding-top: 15px;
+        }
+        .box-txt {
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .box-items.box-items-two table .icon-box {
+            width: 9%;
+            padding-top: 35px;
+        }
+        .box-items.box-items-two table .text-box {
+            width: 91%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .content-container {
+                width: 100%;
+                padding: 25px 15px;
+            }
+            header {
+                background: #1E1E1E;
+            }
+             header .container {
+                margin: 0 auto;
+                padding: 20px 15px;
+            }
+            header img {
+                width: 160px;
+            }
+            .content-bottom {
+                padding: 30px 15px;
+            }
+            .footer-logo {
+                width: 110px;
+            }
+            .socail-links a {
+                margin-left: 2px;
+            }
+             table[class="responsive"] td {
+                display: block !important;
+                width: 100% !important;
+                padding: 0 !important;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            header img {
+                width: 140px;
+            }
+            header .container {
+                padding: 15px 15px;
+            }
+            .top-content h2 {
+                font-size: 20px;
+            }
+            .top-content p {
+                font-size: 13px;
+            }
+            .box-items h5 {
+                font-size: 13px;
+            }
+            .text-box p {
+                font-size: 13px;
+            }
+            .box {
+                padding: 12px;
+            }
+            .bottom-text h5 {
+                font-size: 13px;
+            }
+            .theme-btn a {
+                font-size: 14px;
+            }
+            .socail-links a {
+                margin-left: 3px;
+                margin-bottom: 3px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#">
+                <img src="https://i.ibb.co.com/BHMmqPtT/Frame-2.png" alt="Frame-2" border="0">
+            </a>
+        </div>
+    </header>
+
+
+    <div class="main-container">
+        <div class="content-container">
+            <div class="top-content">
+                <h2>Hi $Full-Name,</h2>
+                <p><span class="highlight">Welcome to Defendia</span> – where your digital security transforms from a worry into a superpower.</p>
+                <p>You're no longer just another internet user hoping for the best. You're now protected by military-grade encryption and intelligent monitoring that works 24/7 to keep your digital life locked down tight.</p>
+            </div>
+            <div class="box-items box-items-two">
+                <h5>Your journey to digital invincibility:</h5>
+                <table class="responsive" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="50%" valign="top" style="padding-right: 5px;">
+                            <div class="box">
+                                <div class="icon-box">
+                                    <img src="https://i.ibb.co.com/vxvJsBmL/shield-keyhole.png" alt="shield-keyhole" border="0">
+                                </div>
+                                <div class="text-box">
+                                    <h4>Instant Protection</h4>
+                                    <p>Instant Protection Your account is already more secure than 99% of internet users</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="50%" valign="top" style="padding-left: 5px;">
+                            <div class="box">
+                                <div class="icon-box">
+                                    <img src="https://i.ibb.co.com/27kBmGXx/focus-lock.png" alt="focus-lock" border="0">
+                                </div>
+                                <div class="text-box">
+                                    <h4>Build Your Vault</h4>
+                                    <p>Start adding your most critical passwords to your encrypted fortress</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="box">
+                    <div class="icon-box">
+                        <img src="https://i.ibb.co.com/xq02M7Hp/password.png" alt="password" border="0">
+                    </div>
+                    <div class="text-box">
+                        <h4>Autofill Magic</h4>
+                        <p>Never type another password again with our browser extension</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon-box">
+                       <img src="https://i.ibb.co.com/TB9z7DHQ/globus-1.png" alt="globus-1" border="0">
+                    </div>
+                    <div class="text-box">
+                        <h4>Everywhere Access</h4>
+                        <p>Desktop, mobile, web – your security travels with you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-txt">
+                <p>Your digital empire deserves a fortress. You've got Defendia.</p>
+            </div>
+            <div class="theme-btn">
+                <a href="#">Explore Your Vault</a>
+            </div>
+            <div class="bottom-text">
+                <h5>Stay Safe, Stay Secure.</h5>
+                <h3>Team Defendia</h3>
+            </div>
+        </div>
+        <div class="content-bottom">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="3">
+                        <img src="https://i.ibb.co.com/7xQ6WbN8/Frame-2-1.png" alt="footer-logo" border="0">
+                    </a>
+                </div>
+                <div class="socail-links">
+                    <a href="#"><img src="https://i.ibb.co.com/Xr1qmyNH/Social-Icons.png" alt="Social-Icons" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/5qnPvXc/Social-Icons-1.png" alt="Social-Icons-1" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/0jNhbW8H/Social-Icons-2.png" alt="Social-Icons-2" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/PZjkWp47/Social-Icons-3.png" alt="Social-Icons-3" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/zhsdJzyV/Social-Icons-4.png" alt="Social-Icons-4" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/1tMm2ySK/Social-Icons-5.png" alt="Social-Icons-5" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/yB0yTmGj/Social-Icons-6.png" alt="Social-Icons-6" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/vCDPtvhY/Social-Icons-7.png" alt="Social-Icons-7" border="0"></a>
+                    <a href="#"><img src="https://i.ibb.co.com/yB7bXKJT/Social-Icons-8.png" alt="Social-Icons-8" border="0"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2261 Market Street #4667, San Francisco, CA 94114</p>
+                <p>Need help? Contact us at <a href="#">support@defendia.app</a></p>
+                <p>&copy; 2025 Defendia AB</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
